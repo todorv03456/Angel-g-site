@@ -1,0 +1,59 @@
+.navigation-menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between; /* Разделя елементите на две страни */
+    align-items: center;
+    width: 100%;
+}
+
+.navigation-menu .logo {
+    margin-right: auto; /* Премества "G site" вляво */
+}
+
+.navigation-menu .menu-items {
+    display: flex; /* Подравнява останалите елементи вдясно */
+}
+
+.navigation-menu ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.navigation-menu ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Червената линия под елементите на менюто */
+.navigation-menu ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: red;
+    left: 50%;
+    bottom: -5px;
+    transition: all 0.3s ease;
+}
+
+.navigation-menu ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+.navigation-menu .logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 20px; /* Регулирай ширината на изображението */
+    height: auto;
+    margin-right: 8px; /* Разстояние между изображението и текста */
+}
